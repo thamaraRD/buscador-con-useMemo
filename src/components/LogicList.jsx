@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { people, calendar, emails } from "./List";
+import { SearchBar } from "./SearchBar";
 
 export const LogicList = () => {
   const [data, setData] = useState([...people, ...calendar, ...emails]);
@@ -47,6 +48,7 @@ export const LogicList = () => {
       <button onClick={handleClick} name="emails">
         Emails
       </button>
+      <SearchBar items={data} onItemSelected={() =>{}} />
     </div>
   );
 };
